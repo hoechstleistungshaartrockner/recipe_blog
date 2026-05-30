@@ -11,22 +11,38 @@ layout: single
 	</div>
 
 	<ul id="recipe" class="recipe-overview">
-		<li class="overview-item" title="Prep Time"><span class="icon"><i class="fas fa-clock"></i></span><span class="label">{{ page.recipe.prep }}</span></li>
-		<li class="overview-item" title="Difficulty"><span class="icon"><i class="fas fa-signal"></i></span><span class="label">{{ page.recipe.difficulty | default: '—' }}</span></li>
-		<li class="overview-item" title="Servings"><span class="icon"><i class="fas fa-user-friends"></i></span><span class="label"><input id="servings_number" type="number" min="1" value="{{ page.recipe.servings }}"> <label for="servings_number">{{ page.recipe.servings_name }}</label></span></li>
+		<li class="overview-item" title="Prep Time">
+			<span class="meta-label">Prep Zeit</span>
+			<span class="icon"><i class="fas fa-clock"></i></span>
+			<span class="label">{{ page.recipe.prep }}</span>
+		</li>
+		<li class="overview-item" title="Difficulty">
+			<span class="meta-label">Aufwand</span>
+			<span class="icon"><i class="fas fa-signal"></i></span>
+			<span class="label">{{ page.recipe.difficulty | default: '—' }}</span>
+		</li>
+		<li class="overview-item" title="Servings">
+			<span class="meta-label">Portionen</span>
+			<span class="icon"><i class="fas fa-user-friends"></i></span>
+			<span class="label">{{ page.recipe.servings }} {{ page.recipe.servings_name }}</span>
+		</li>
 		{% if page.recipe.cook %}
-			<li class="overview-item small" title="Cook Time"><span class="icon"><i class="fas fa-hourglass-half"></i></span><span class="label">{{ page.recipe.cook }}</span></li>
+			<li class="overview-item small" title="Cook Time">
+				<span class="meta-label">Kochzeit</span>
+				<span class="icon"><i class="fas fa-hourglass-half"></i></span>
+				<span class="label">{{ page.recipe.cook }}</span>
+			</li>
 		{% endif %}
 	</ul>
 
 	{% if page.recipe.nutrition %}
 	<div class="nutrition-facts">
-		<h3>Nutrition</h3>
+		<h3>Nährwerte pro Portion</h3>
 		<div class="nutrition-grid">
-			{% if page.recipe.nutrition.calories_per_serving %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.calories_per_serving }}</span><span class="nf-label">Calories</span></div>{% endif %}
-			{% if page.recipe.nutrition.protein %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.protein }}</span><span class="nf-label">Protein</span></div>{% endif %}
-			{% if page.recipe.nutrition.carbs %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.carbs }}</span><span class="nf-label">Carbs</span></div>{% endif %}
-			{% if page.recipe.nutrition.fat %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.fat }}</span><span class="nf-label">Fat</span></div>{% endif %}
+			{% if page.recipe.nutrition.calories_per_serving %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.calories_per_serving }}</span><span class="nf-label">Kalorien</span></div>{% endif %}
+			{% if page.recipe.nutrition.protein %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.protein }}</span><span class="nf-label">Proteine</span></div>{% endif %}
+			{% if page.recipe.nutrition.carbs %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.carbs }}</span><span class="nf-label">Kohlenhydrate</span></div>{% endif %}
+			{% if page.recipe.nutrition.fat %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.fat }}</span><span class="nf-label">Fett</span></div>{% endif %}
 		</div>
 	</div>
 	{% endif %}

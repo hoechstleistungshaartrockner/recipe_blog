@@ -8,8 +8,8 @@ featured_image: https://media.istockphoto.com/id/184946059/de/foto/pound-cake.jp
 recipe:
   servings: 12
   difficulty: easy
-  prep: 15 minutes
-  cook: 65 minutes
+  prep: 15 min
+  cook: 65 min
   nutrition:
     calories_per_serving: 300
     protein: 51 g

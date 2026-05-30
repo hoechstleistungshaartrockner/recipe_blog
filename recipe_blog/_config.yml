@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Chris' Recipe Collection
+title: Chris' Rezeptsammlung
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I don't really want to share my recipes, I only want to use the recipe import functionality of my calorie tracking app, so I guess I have to create a blog for it. But while you're here, you might as well check out my recipes, right?
+  Ich möchte eigentlich nur die Rezept-Import-Funktion meiner Kalorien-Tracking-App und meiner Einkaufslisten-App verwenden, daher muss ich leider einen Blog dafür erstellen. Aber wenn du schonmal hier bist, kannst du dir gerne meine Rezepte anschauen.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

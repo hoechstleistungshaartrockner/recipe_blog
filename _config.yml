@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "de-DE"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
-title                    : "Chris Rezeptesammlung"
+title                    : "Flamongo's Rezeptesammlung"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "H. Trockner"
@@ -114,8 +114,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Chris"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Flamongo"
+  avatar           : "assets/images/honk.svg"
   bio              : "Ich möchte nur die Rezept-Import-Funktionalität meiner Kalorien-Tracking-App und meiner Einkaufslisten-App verwenden, daher muss ich leider einen Blog dafür erstellen. Aber während du hier bist, kannst du dir gerne meine Rezepte anschauen."
   location         : "Irgendwo, Deutschland"
   email            :

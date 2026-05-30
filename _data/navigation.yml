@@ -8,6 +8,8 @@ main:
     url: /search/
   - title: "Archiv"
     url: /archive/
+  - title: "Zufälliges Rezept"
+    url: /random/
   - title: "About"
     url: /about/
   # - title: "About"

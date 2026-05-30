@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Chris' Rezeptsammlung
+title: Flamongo's Rezeptsammlung
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ich möchte eigentlich nur die Rezept-Import-Funktion meiner Kalorien-Tracking-App und meiner Einkaufslisten-App verwenden, daher muss ich leider einen Blog dafür erstellen. Aber wenn du schonmal hier bist, kannst du dir gerne meine Rezepte anschauen.

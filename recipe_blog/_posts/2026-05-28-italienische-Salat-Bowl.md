@@ -2,7 +2,8 @@
 layout: single
 title:  "Italienische Salat Bowl"
 date:   2026-05-28 18:00:00 +0100
-categories: salate mealprep lowcarb
+categories: Italienisch
+tags: Salat Mealprep Lowcarb
 ---
 
 Nachdem ich von Salat Bowls erfahren habe, habe ich mir mit Hilfe von Namentlich-nicht-erwähntem-KI-Modell (ich werde nämlich nicht bezahlt, Werbung für die zu machen) dieses Rezept ausgedacht. Ist sehr lecker! Ich wurde von einer Kollegin auf der Arbeit neidisch dafür angeschaut. Wie ich finde zu Recht!

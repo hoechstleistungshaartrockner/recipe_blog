@@ -1,8 +1,8 @@
 ---
-layout: single
+layout: posts
 title:  "French Bistro Salat"
-date:   2026-05-28 18:00:00 +0100
-categories: salads mealprep lowcarb
+categories: Französisch
+tags: Salat Mealprep Lowcarb
 ---
 
 Ich habe dieses Rezept erstellt, nachdem ich von "Salat Bowls" erfahren habe.

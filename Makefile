@@ -6,3 +6,6 @@ new:
 
 serve:
 	bundle exec jekyll serve
+
+serve_drafts:
+	bundle exec jekyll serve --draft

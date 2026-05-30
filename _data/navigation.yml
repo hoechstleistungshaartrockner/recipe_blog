@@ -1,9 +1,15 @@
 # main links
 main:
-  - title: "Posts"
-    url: /year-archive/
+  - title: "Kategorien"
+    url: /categories/
   - title: "Tags"
     url: /tags/
+  - title: "Suche"
+    url: /search/
+  - title: "Archiv"
+    url: /archive/
+  - title: "About"
+    url: /about/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

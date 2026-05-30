@@ -4,12 +4,17 @@ title: Lemon Cake
 layout: recipe
 categories:
   - Cakes
-featured_image: https://source.unsplash.com/NAN22eh754c/1560x940
+featured_image: https://media.istockphoto.com/id/184946059/de/foto/pound-cake.jpg?s=2048x2048&w=is&k=20&c=uzcmpKapT6azqcUQDfyCtrg8iahfFn-xb9-7GZdqOyI=
 recipe:
   servings: 12
-  servings_name: slices
+  difficulty: easy
   prep: 15 minutes
   cook: 65 minutes
+  nutrition:
+    calories_per_serving: 300
+    protein: 51 g
+    carbs: 200 g
+    fat: 20 g
   ingredients_markdown: |-
     * 1 cup unsalted butter
     * 2 1/2 cups all-purpose flour
@@ -31,15 +36,3 @@ recipe:
 ---
 
 If you're a sour fan you're going to love this cake. Lemon Cake is one of my favorite year-round desserts, but it is a perfect choice for spring and summer, when everyone tends to crave citrus or light & flavorful recipes
-
-![Cake](https://source.unsplash.com/1HPTYLozDGw)
-
-Straight out of the oven.
-
-![Cake](https://source.unsplash.com/WoVGndRTx2o)
-
-You can add extra flavour with berries.
-
-![Cake](https://source.unsplash.com/7JYVKRo7i5Q)
-
-Or a caramel sauce.

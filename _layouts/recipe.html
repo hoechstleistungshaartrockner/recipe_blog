@@ -1,0 +1,58 @@
+---
+layout: single
+---
+<article class="post">
+	<div class="image">
+		<img src="{{ page.featured_image }}" alt="{{ page.title }}">
+	</div>
+
+	<div class="recipe-body">
+		{{ content }}
+	</div>
+
+	<ul id="recipe" class="recipe-overview">
+		<li class="overview-item" title="Prep Time"><span class="icon"><i class="fas fa-clock"></i></span><span class="label">{{ page.recipe.prep }}</span></li>
+		<li class="overview-item" title="Difficulty"><span class="icon"><i class="fas fa-signal"></i></span><span class="label">{{ page.recipe.difficulty | default: '—' }}</span></li>
+		<li class="overview-item" title="Servings"><span class="icon"><i class="fas fa-user-friends"></i></span><span class="label"><input id="servings_number" type="number" min="1" value="{{ page.recipe.servings }}"> <label for="servings_number">{{ page.recipe.servings_name }}</label></span></li>
+		{% if page.recipe.cook %}
+			<li class="overview-item small" title="Cook Time"><span class="icon"><i class="fas fa-hourglass-half"></i></span><span class="label">{{ page.recipe.cook }}</span></li>
+		{% endif %}
+	</ul>
+
+	{% if page.recipe.nutrition %}
+	<div class="nutrition-facts">
+		<h3>Nutrition</h3>
+		<div class="nutrition-grid">
+			{% if page.recipe.nutrition.calories_per_serving %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.calories_per_serving }}</span><span class="nf-label">Calories</span></div>{% endif %}
+			{% if page.recipe.nutrition.protein %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.protein }}</span><span class="nf-label">Protein</span></div>{% endif %}
+			{% if page.recipe.nutrition.carbs %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.carbs }}</span><span class="nf-label">Carbs</span></div>{% endif %}
+			{% if page.recipe.nutrition.fat %}<div class="nf-item"><span class="nf-value">{{ page.recipe.nutrition.fat }}</span><span class="nf-label">Fat</span></div>{% endif %}
+		</div>
+	</div>
+	{% endif %}
+
+	<div class="recipe-contents">
+		<details class="collapsible ingredients" open>
+			<summary><span>Zutaten</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
+			<div class="collapsible-body">
+				{{ page.recipe.ingredients_markdown | markdownify }}
+				{% if page.recipe.utensils_markdown %}
+					<h4>Utensilien</h4>
+					{{ page.recipe.utensils_markdown | markdownify }}
+				{% endif %}
+				<script async="async" src="//platform.getbring.com/widgets/import.js"></script>
+				<div data-bring-import style="display:none">
+					<a href="https://www.getbring.com">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
+				</div>
+			</div>
+		</details>
+
+		<details class="collapsible directions" open>
+			<summary><span>Zubereitung</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
+			<div class="collapsible-body">
+				{{ page.recipe.directions_markdown | markdownify }}
+			</div>
+		</details>
+	</div>
+
+</article>

@@ -1,0 +1,12 @@
+{% assign locale = include.locale | default: site.locale %}
+
+{% assign category_name = include.category | default: page.category %}
+{% assign posts_for_category = site.categories[category_name] %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts_for_category %}
+    {% include archive-single.html locale=locale type=entries_layout %}
+  {% endfor %}
+</div>
+<a href="/categories/" class="back-to-top">{{ site.data.ui-text[locale].back_to_top | default: 'Back to Top' }} &larr; {{ site.data.ui-text[locale].back_to_categories | default: 'Back to categories' }}</a>

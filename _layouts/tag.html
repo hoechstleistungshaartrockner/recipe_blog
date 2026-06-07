@@ -5,7 +5,4 @@ layout: archive
 
 {{ content }}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include posts-tag.html locale=locale taxonomy=page.taxonomy type=entries_layout %}
-</div>
+{% include tag-page.html locale=locale tag=page.tag %}

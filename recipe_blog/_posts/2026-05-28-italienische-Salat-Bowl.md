@@ -2,8 +2,8 @@
 layout: recipe
 title:  "Italienische Salat Bowl"
 date:   2026-05-28 18:00:00 +0100
-categories: Italienisch
-tags: Salat Mealprep Lowcarb
+categories: [Italienisch]
+tags: [Salat, Mealprep, Lowcarb]
 recipe:
   servings: 1
   servings_name: Portion

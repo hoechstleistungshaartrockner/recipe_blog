@@ -2,8 +2,8 @@
 layout: recipe
 title: "Honey Chipotle Chicken"
 date:   2026-05-29 18:00:00 +0100
-categories: Amerikanisch
-tags: Amerikanisch Mealprep Hähnchen Fleisch Crockpot Hauptgericht
+categories: [Amerikanisch]
+tags: [Amerikanisch, Mealprep, Hähnchen, Fleisch, Crockpot, Hauptgericht]
 description: "Ein Crockpot-Rezept für zartes Pulled Chicken in einer süß-rauchigen Honig-Chipotle-Sauce – ideal für Tacos, Sandwiches oder mit Reis."
 recipe:
   servings: 7

@@ -1,8 +1,8 @@
 ---
 layout: recipe
 title: "French Bistro Salat"
-categories: Französisch
-tags: Salat Mealprep Lowcarb
+categories: [Französisch]
+tags: [Salat, Mealprep, Lowcarb]
 recipe:
   servings: 2
   servings_name: Portionen

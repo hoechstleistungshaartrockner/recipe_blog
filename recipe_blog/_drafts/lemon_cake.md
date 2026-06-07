@@ -2,8 +2,7 @@
 date: 2017-01-06
 title: Lemon Cake
 layout: recipe
-categories:
-  - Cakes
+categories: [Cakes]
 featured_image: https://media.istockphoto.com/id/184946059/de/foto/pound-cake.jpg?s=2048x2048&w=is&k=20&c=uzcmpKapT6azqcUQDfyCtrg8iahfFn-xb9-7GZdqOyI=
 recipe:
   servings: 12

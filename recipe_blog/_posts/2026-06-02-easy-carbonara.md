@@ -1,10 +1,8 @@
 ---
 layout: recipe
 title: "Einfache Carbonara"
-categories: 
-  - Italienisch
-tags: 
-  - Pasta
+categories: [Italienisch]
+tags: [Pasta]
 featured_image: https://img.chefkoch-cdn.de/rezepte/1298241234947062/bilder/1616493/crop-960x640/carbonara-wie-bei-der-mamma-in-rom.jpg
 author: Rocko
 recipe:

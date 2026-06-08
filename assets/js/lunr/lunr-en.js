@@ -7,6 +7,7 @@ var idx = lunr(function () {
   this.field('excerpt')
   this.field('categories')
   this.field('tags')
+  this.field('equipment')
   this.ref('id')
 
   this.pipeline.remove(lunr.trimmer)
@@ -17,6 +18,7 @@ var idx = lunr(function () {
       excerpt: store[item].excerpt,
       categories: store[item].categories,
       tags: store[item].tags,
+      equipment: store[item].equipment ? store[item].equipment.join(' ') : '',
       id: item
     })
   }

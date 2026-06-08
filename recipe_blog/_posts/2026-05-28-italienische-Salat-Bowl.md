@@ -3,11 +3,11 @@ layout: recipe
 title:  "Italienische Salat Bowl"
 date:   2026-05-28 18:00:00 +0100
 categories: [Italienisch]
-tags: [Salat, Mealprep, Lowcarb]
+tags: [Salat, Mealprep, Lowcarb, Hähnchen, Fleisch]
 recipe:
   servings: 1
   servings_name: Portion
-  difficulty: easy
+  difficulty: 3.5/10
   prep: 10 min
   nutrition:
     calories_per_serving: ???
@@ -15,17 +15,17 @@ recipe:
     carbs: ??? g
     fat: ??? g
   ingredients_markdown: |-
-    * 60g gemischter Salat
-    * 30g frischer Spinat
-    * 150g Cherry-Tomaten, halbiert
-    * 100g Gurke, mit der Mandoline dünn geschnitten
-    * 30g rote Zwiebel, mit der Mandoline dünn geschnitten
-    * 40g Croutons
-    * 80g Mozzarella, in Stücke gerissen
-    * 120g Hähnchenbrustfilet, in mundgerechte Stücke geschnitten, gegrillt oder gebraten
-    * 10g frischer Basilikum
-    * 15ml Olivenöl
-    * 15ml Balsamico Essig
+    * 60 g gemischter Salat
+    * 30 g frischer Spinat
+    * 150 g Cherry-Tomaten, halbiert
+    * 100 g Gurke, mit der Mandoline dünn geschnitten
+    * 30 g rote Zwiebel, mit der Mandoline dünn geschnitten
+    * 40 g Croutons
+    * 80 g Mozzarella, in Stücke gerissen
+    * 120 g Hähnchenbrustfilet, in mundgerechte Stücke geschnitten, gegrillt oder gebraten
+    * 10 g frischer Basilikum
+    * 15 ml Olivenöl
+    * 15 ml Balsamico Essig
     * 1 Prise getrockneter Oregano
     * Salz und Pfeffer zum Abschmecken
   directions_markdown: |-

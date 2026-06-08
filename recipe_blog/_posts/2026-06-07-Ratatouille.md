@@ -4,12 +4,12 @@ title: "Ratatouille"
 date: 2026-06-07 12:00:00 +0200
 categories: [Französisch]
 featured_image: https://www.kikkoman.de/fileadmin/_processed_/1/8/csm_1075-recipe-page-Saffron-scented-Ratatouille_desktop_37bdf899de.webp
-tags: [Ratatouille, Gemüse, Hauptgericht, Vegetarisch]
+tags: [Gemüse, Hauptgericht, Beilage, Vegan]
 description: "Klassische Ratatouille mit gebackener Piperade, Gemüse und Kräuter-Vinaigrette – perfekt als aromatisches Gemüsehauptgericht."
 recipe:
   servings: 4
   servings_name: Portionen
-  difficulty: ja
+  difficulty: 6/10
   prep: 40 min
   cook: 1 h 50 min
   nutrition:

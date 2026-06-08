@@ -42,6 +42,12 @@ var store = [
           {%- endif -%}
         "categories": {{ doc.categories | jsonify }},
         "tags": {{ doc.tags | jsonify }},
+        {%- if doc.recipe and doc.recipe.equipment -%}
+        "equipment": {{ doc.recipe.equipment | jsonify }},
+        {%- else -%}
+        "equipment": [],
+        {%- endif -%}
+        "difficulty": {{ doc.recipe.difficulty | default: '' | jsonify }},
         "url": {{ doc.url | relative_url | jsonify }},
         "teaser": {{ teaser | relative_url | jsonify }}
       }{%- unless forloop.last and l -%},{%- endunless -%}
@@ -78,7 +84,13 @@ var store = [
             replace:"</h6>", " "|
           strip_html | strip_newlines | truncatewords: 50 | jsonify }},
         {%- endif -%}
-      "url": {{ doc.url | absolute_url | jsonify }}
+      "url": {{ doc.url | absolute_url | jsonify }},
+      {%- if doc.recipe and doc.recipe.equipment -%}
+      "equipment": {{ doc.recipe.equipment | jsonify }},
+      {%- else -%}
+      "equipment": [] ,
+      {%- endif -%}
+      "difficulty": {{ doc.recipe.difficulty | default: '' | jsonify }}
   }{%- unless forloop.last and l -%},{%- endunless -%}
   {%- endfor -%}
 {%- endif -%}]

@@ -12,6 +12,8 @@ main:
     url: /random/
   - title: "About"
     url: /about/
+  - title: "Erweiterte Suche"
+    url: /advanced-search/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

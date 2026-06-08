@@ -1,0 +1,376 @@
+---
+layout: default
+---
+{%- assign locale = page.locale | default: layout.locale | default: site.locale -%}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html locale=locale %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html locale=locale %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html locale=locale %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
+    {% endunless %}
+
+    {{ content }}
+
+    {%- assign search_provider = site.search_provider | default: "lunr" -%}
+    {%- case search_provider -%}
+      {%- when "lunr" -%}
+        <div class="search-detailed__controls">
+          <form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+            <label class="sr-only" for="search">
+              {{ site.data.ui-text[locale].search_label_text | default: 'Enter your search term...' }}
+            </label>
+            <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+          </form>
+          <button id="clear-filters" type="button" class="button button--secondary">Filter zurücksetzen</button>
+        </div>
+
+        {%- assign all_equipment = "" -%}
+        {%- for c in site.collections -%}
+          {%- for doc in c.docs -%}
+            {%- if doc.recipe and doc.recipe.equipment -%}
+              {%- for eq in doc.recipe.equipment -%}
+                {%- capture all_equipment %}{{ all_equipment }}|{{ eq | strip }}{% endcapture -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- assign equipment_items = all_equipment | split: "|" | uniq | sort -%}
+
+        {% if equipment_items and equipment_items.size > 0 %}
+          <div class="equipment-filters">
+            <h2>Equipment</h2>
+            <div class="equipment-filters__buttons">
+              {% for eq in equipment_items %}
+                {% if eq != "" %}
+                  <button type="button" class="equipment-filter" data-equipment="{{ eq | escape }}">{{ eq }}</button>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="difficulty-filters">
+          <h2>Schwierigkeitsbereich</h2>
+          <div class="difficulty-filters__controls">
+            <div class="difficulty-filters__labels">
+              <span>Min: <strong id="difficulty-min-value">0.0</strong></span>
+              <span>Max: <strong id="difficulty-max-value">10.0</strong></span>
+            </div>
+            <div class="difficulty-range">
+              <div class="difficulty-slider-track">
+                <span class="difficulty-selected"></span>
+              </div>
+              <div class="difficulty-range-inputs">
+                <input id="difficulty-min" class="difficulty-slider" type="range" min="0" max="10" step="0.1" value="0" />
+                <input id="difficulty-max" class="difficulty-slider" type="range" min="0" max="10" step="0.1" value="10" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="results" class="results"></div>
+      {%- when "google" -%}
+        <div class="search-warning">
+          <p>Detaillierte Suche mit Ausrüstung unterstützt derzeit nur Lunr.</p>
+        </div>
+      {%- when "algolia" -%}
+        <div class="search-warning">
+          <p>Detaillierte Suche mit Ausrüstung unterstützt derzeit nur Lunr.</p>
+        </div>
+    {%- endcase -%}
+  </div>
+</div>
+
+{% if search_provider == "lunr" %}
+<style>
+  .equipment-filters__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .equipment-filter {
+    border: 1px solid #ccc;
+    background: transparent;
+    color: inherit;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  }
+  .equipment-filter:hover {
+    border-color: #888;
+  }
+  .equipment-filter.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+  }
+  .difficulty-filters {
+    margin-top: 1.5rem;
+  }
+  .difficulty-filters__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .difficulty-filters__labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  .difficulty-range {
+    position: relative;
+  }
+  .difficulty-slider-track {
+    width: 100%;
+    height: 6px;
+    background: #e1e9f6;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+  }
+  .difficulty-selected {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1b53c0;
+    border-radius: 999px;
+  }
+  .difficulty-range-inputs {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 100%;
+    height: 28px;
+  }
+  .difficulty-slider {
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    margin: 0;
+    -webkit-appearance: none;
+    background: none;
+    pointer-events: none;
+  }
+  .difficulty-slider::-webkit-slider-thumb,
+  .difficulty-slider::-moz-range-thumb {
+    pointer-events: auto;
+  }
+  #difficulty-min {
+    z-index: 1;
+  }
+  #difficulty-max {
+    z-index: 2;
+  }
+  .difficulty-slider::-webkit-slider-thumb,
+  .difficulty-slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #1b53c0;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(27, 83, 192, 0.15);
+  }
+  .difficulty-slider::-moz-range-track {
+    background: transparent;
+    border: none;
+  }
+  .difficulty-slider::-webkit-slider-runnable-track {
+    background: transparent;
+    border: none;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var selectedEquipment = [];
+    var difficultyMin = 0;
+    var difficultyMax = 10;
+    var $search = $('#search');
+    var $results = $('#results');
+    var $equipmentButtons = $('.equipment-filter');
+    var $difficultyMin = document.querySelector('#difficulty-min');
+    var $difficultyMax = document.querySelector('#difficulty-max');
+    var $difficultyMinValue = document.querySelector('#difficulty-min-value');
+    var $difficultyMaxValue = document.querySelector('#difficulty-max-value');
+    var $selectedRange = document.querySelector('.difficulty-selected');
+
+    function parseDifficulty(value) {
+      if (!value) {
+        return NaN;
+      }
+      var match = String(value).match(/^(\d+(?:\.\d+)?)\/10$/);
+      return match ? parseFloat(match[1]) : NaN;
+    }
+
+    function formatResult(itemRef) {
+      if (store[itemRef].teaser) {
+        return '<div class="list__item">' +
+          '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">' +
+            '<h2 class="archive__item-title" itemprop="headline">' +
+              '<a href="' + store[itemRef].url + '" rel="permalink">' + store[itemRef].title + '</a>' +
+            '</h2>' +
+            '<div class="archive__item-teaser">' +
+              '<img src="' + store[itemRef].teaser + '" alt="">' +
+            '</div>' +
+            '<p class="archive__item-excerpt" itemprop="description">' + store[itemRef].excerpt.split(' ').splice(0,20).join(' ') + '...</p>' +
+          '</article>' +
+        '</div>';
+      }
+      return '<div class="list__item">' +
+        '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">' +
+          '<h2 class="archive__item-title" itemprop="headline">' +
+            '<a href="' + store[itemRef].url + '" rel="permalink">' + store[itemRef].title + '</a>' +
+          '</h2>' +
+          '<p class="archive__item-excerpt" itemprop="description">' + store[itemRef].excerpt.split(' ').splice(0,20).join(' ') + '...</p>' +
+        '</article>' +
+      '</div>';
+    }
+
+    function renderResults(results) {
+      $results.empty();
+      $results.prepend('<p class="results__found">' + results.length + ' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
+      results.forEach(function(item) {
+        $results.append(formatResult(item.ref));
+      });
+    }
+
+    function matchesEquipment(itemRef) {
+      if (selectedEquipment.length === 0) {
+        return true;
+      }
+      var equipment = store[itemRef].equipment || [];
+      return selectedEquipment.every(function(selected) {
+        return equipment.indexOf(selected) !== -1;
+      });
+    }
+
+    function matchesDifficulty(itemRef) {
+      var difficulty = parseDifficulty(store[itemRef].difficulty);
+      if (isNaN(difficulty)) {
+        return false;
+      }
+      return difficulty >= difficultyMin && difficulty <= difficultyMax;
+    }
+
+    function getAllResults() {
+      return Object.keys(store).map(function(ref) {
+        return { ref: ref };
+      });
+    }
+
+    function runSearch() {
+      var query = $search.val().toLowerCase();
+      var results = [];
+
+      if (query.trim() === '') {
+        results = getAllResults();
+      } else {
+        results = idx.query(function(q) {
+          query.split(lunr.tokenizer.separator).forEach(function(term) {
+            q.term(term, { boost: 100 });
+            if (query.lastIndexOf(' ') != query.length - 1) {
+              q.term(term, { usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 });
+            }
+            if (term != '') {
+              q.term(term, { usePipeline: false, editDistance: 1, boost: 1 });
+            }
+          });
+        });
+      }
+
+      results = results.filter(function(result) {
+        return matchesEquipment(result.ref) && matchesDifficulty(result.ref);
+      });
+      renderResults(results);
+    }
+
+    function updateDifficultyLabels() {
+      $difficultyMinValue.textContent = difficultyMin.toFixed(1);
+      $difficultyMaxValue.textContent = difficultyMax.toFixed(1);
+    }
+
+    function updateSelectedRange() {
+      var minPercent = (difficultyMin / 10) * 100;
+      var maxPercent = (difficultyMax / 10) * 100;
+      $selectedRange.style.left = minPercent + "%";
+      $selectedRange.style.right = (100 - maxPercent) + "%";
+    }
+
+    function resetDifficultySlider() {
+      difficultyMin = 0;
+      difficultyMax = 10;
+      $difficultyMin.value = difficultyMin;
+      $difficultyMax.value = difficultyMax;
+      updateDifficultyLabels();
+      updateSelectedRange();
+    }
+
+    function clearFilters() {
+      selectedEquipment = [];
+      $equipmentButtons.removeClass('active');
+      resetDifficultySlider();
+      runSearch();
+    }
+
+    $difficultyMin.addEventListener('input', function(event) {
+      difficultyMin = parseFloat(event.target.value);
+      if (difficultyMin > difficultyMax) {
+        difficultyMax = difficultyMin;
+        $difficultyMax.value = difficultyMax;
+      }
+      updateDifficultyLabels();
+      updateSelectedRange();
+      runSearch();
+    });
+
+    $difficultyMax.addEventListener('input', function(event) {
+      difficultyMax = parseFloat(event.target.value);
+      if (difficultyMax < difficultyMin) {
+        difficultyMin = difficultyMax;
+        $difficultyMin.value = difficultyMin;
+      }
+      updateDifficultyLabels();
+      updateSelectedRange();
+      runSearch();
+    });
+
+    document.querySelector('#search').addEventListener('keyup', runSearch);
+    $equipmentButtons.on('click', function() {
+      var $button = $(this);
+      var equipment = $button.data('equipment');
+      $button.toggleClass('active');
+      if ($button.hasClass('active')) {
+        selectedEquipment.push(equipment);
+      } else {
+        selectedEquipment = selectedEquipment.filter(function(value) {
+          return value !== equipment;
+        });
+      }
+      runSearch();
+    });
+    document.querySelector('#clear-filters').addEventListener('click', clearFilters);
+
+    resetDifficultySlider();
+    runSearch();
+  });
+</script>
+{% endif %}

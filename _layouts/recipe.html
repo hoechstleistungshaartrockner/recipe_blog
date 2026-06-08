@@ -48,6 +48,19 @@ layout: single
 	{% endif %}
 
 	<div class="recipe-contents">
+		{% if page.recipe.equipment and page.recipe.equipment.size > 0 %}
+		<details class="collapsible equipment" close>
+			<summary><span>Notwendige Küchenausstattung</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
+			<div class="collapsible-body">
+				<ul class="equipment-list">
+					{% for eq in page.recipe.equipment %}
+						<li>{{ eq }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</details>
+		{% endif %}
+
 		<details class="collapsible ingredients" open>
 			<summary><span>Zutaten</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
 			<div class="collapsible-body">

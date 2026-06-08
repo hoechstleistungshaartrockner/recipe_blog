@@ -2,13 +2,13 @@
 layout: recipe
 title: "Einfache Carbonara"
 categories: [Italienisch]
-tags: [Pasta]
+tags: [Pasta, Fleisch, Schwein]
 featured_image: https://img.chefkoch-cdn.de/rezepte/1298241234947062/bilder/1616493/crop-960x640/carbonara-wie-bei-der-mamma-in-rom.jpg
 author: Rocko
 recipe:
   servings: 2
   servings_name: Portionen
-  difficulty: easy
+  difficulty: 2/10
   prep: 10 min
   nutrition:
     calories_per_serving: ???
@@ -17,11 +17,10 @@ recipe:
     fat: ??? g
   ingredients_markdown: |-
     * 2 Eier, Größe M
-    * 80g Grana Padano/Parmesan
-    * 250g Fussili
-    * 125g Schinkenwürfel/Speckwürfel
-    * Salz zum Abschmecken
-    * Pfeffer zum Abschmecken
+    * 80 g Grana Padano/Parmesan
+    * 250 g Fussili
+    * 125 g Schinkenwürfel/Speckwürfel
+    * Salz, Pfeffer zum Abschmecken
   directions_markdown: |-
     1. gesalzenes Wasser im Topf aufkochen und Nudeln nach Anleitung kochen.
     2. Schinkenwürfel bei mittlerer Hitze in einer Pfanne braten.

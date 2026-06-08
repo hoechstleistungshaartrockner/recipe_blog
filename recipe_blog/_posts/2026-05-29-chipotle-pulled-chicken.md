@@ -3,14 +3,15 @@ layout: recipe
 title: "Honey Chipotle Chicken"
 date:   2026-05-29 18:00:00 +0100
 categories: [Amerikanisch]
-tags: [Amerikanisch, Mealprep, Hähnchen, Fleisch, Crockpot, Hauptgericht]
+tags: [Mealprep, Hähnchen, Fleisch, Crockpot, Hauptgericht]
 description: "Ein Crockpot-Rezept für zartes Pulled Chicken in einer süß-rauchigen Honig-Chipotle-Sauce – ideal für Tacos, Sandwiches oder mit Reis."
 recipe:
+  equipment: [Slowcooker, Scharfes Messer, Schneidbrett]
   servings: 7
   servings_name: Portionen
-  difficulty: medium
+  difficulty: 2/10
   prep: 15 min
-  cook: 5–6 Stunden
+  cook: 5–6 h
   nutrition:
     calories_per_serving: 603 kcal
     protein: 42 g

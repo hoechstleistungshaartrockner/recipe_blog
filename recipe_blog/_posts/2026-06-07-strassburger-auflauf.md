@@ -4,12 +4,12 @@ title: "Straßburger Auflauf"
 featured_image: https://img.chefkoch-cdn.de/rezepte/701911172819472/bilder/764355/crop-960x640/strassburger-auflauf.jpg
 date: 2026-06-07 12:00:00 +0200
 categories: [Französisch]
-tags: [Auflauf, Nudelauflauf, Hauptgericht]
+tags: [Auflauf, Nudelauflauf, Hauptgericht, Fleisch, Rind]
 description: "Herzhafter Nudelauflauf mit Hackfleisch, Tomatenmark und Sahne – lecker überbacken und perfekt als Komfort-Food."
 recipe:
   servings: 2
   servings_name: Portionen
-  difficulty: medium
+  difficulty: 3/10
   prep: 30 min
   cook: 40 min
   nutrition:

@@ -5,6 +5,7 @@ date:   2026-05-29 18:00:00 +0100
 categories: [Amerikanisch]
 tags: [Mealprep, Hähnchen, Fleisch, Crockpot, Hauptgericht]
 description: "Ein Crockpot-Rezept für zartes Pulled Chicken in einer süß-rauchigen Honig-Chipotle-Sauce – ideal für Tacos, Sandwiches oder mit Reis."
+author: Flamongo
 recipe:
   equipment: [Slowcooker, Scharfes Messer, Schneidbrett]
   servings: 7

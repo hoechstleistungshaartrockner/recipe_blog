@@ -32,3 +32,25 @@ recipe:
 ---
 
 Hier kannst du eine kurze Einleitung oder Beschreibung für dein Rezept einfügen. Ersetze den Text durch Hintergrund, Tipps oder Serviervorschläge.
+
+## Bestimmung des Schwierigkeitsgrads
+Der Schwierigkeitsgrad des Rezepts wird anhand der folgenden Fragen bestimmt. Jedes Rezept startet bei 0. Kreuze an, falls zutreffend:
+
+```
+[ ] Das Rezept hat mehr als 5 Zutaten (+ 0.5)
+[ ] Das Rezept hat mehr als 10 Zutaten (+ 1.0)
+[ ] Das Rezept erwärmt das Essen (+ 0.5)
+[ ] Es werden mind. 3 verschiedene Erwärmungsmethoden verwendet (+ 1.0)
+[ ] Ein scharfes Messer muss verwendet werden (+ 0.5)
+[ ] Mindestens 5 verschiedene Equipment-Teile werden gelistet (+ 1.0)
+[ ] Das Rezept hat mehr als 5 Schritte (+ 0.5)
+[ ] Das Rezept hat mehr als 10 Schritte (+ 0.5)
+[ ] Das Rezept hat mehr als 15 Schritte (+ 0.5)
+[ ] Das Timing ist wichtig, weil mehrere Schritte parallel laufen (+ 0.5)
+[ ] Es sind lange Ruhe- oder Ziehzeiten einzuplanen (+ 0.5)
+[ ] Es wird sehr präzise Temperatur- oder Konsistenzkontrolle benötigt (+ 0.5)
+[ ] Zutaten erfordern aufwendige Vorbereitung (Einweichen, Häuten, Entbeinen) (+ 1.5)
+[ ] Mehrere unterschiedliche Garzyklen oder Temperaturwechsel sind nötig (+ 0.5)
+[ ] Spezielle Technik oder Präzision ist notwendig (Emulsion, Glasur, Soufflé) (+ 0.5)
+[ ] Die Zubereitung erlaubt es nicht wegzugehen. (+1.5)
+```

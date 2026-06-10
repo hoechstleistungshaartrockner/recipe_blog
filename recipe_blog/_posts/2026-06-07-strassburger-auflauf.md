@@ -6,6 +6,7 @@ date: 2026-06-07 12:00:00 +0200
 categories: [Französisch]
 tags: [Auflauf, Nudelauflauf, Hauptgericht, Fleisch, Rind]
 description: "Herzhafter Nudelauflauf mit Hackfleisch, Tomatenmark und Sahne – lecker überbacken und perfekt als Komfort-Food."
+author: Flamongo
 recipe:
   servings: 2
   servings_name: Portionen

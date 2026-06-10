@@ -6,6 +6,7 @@ categories: [Französisch]
 featured_image: https://www.kikkoman.de/fileadmin/_processed_/1/8/csm_1075-recipe-page-Saffron-scented-Ratatouille_desktop_37bdf899de.webp
 tags: [Gemüse, Hauptgericht, Beilage, Vegan]
 description: "Klassische Ratatouille mit gebackener Piperade, Gemüse und Kräuter-Vinaigrette – perfekt als aromatisches Gemüsehauptgericht."
+author: Flamongo
 recipe:
   servings: 4
   servings_name: Portionen

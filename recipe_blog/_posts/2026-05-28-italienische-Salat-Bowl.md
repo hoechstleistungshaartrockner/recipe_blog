@@ -4,6 +4,7 @@ title:  "Italienische Salat Bowl"
 date:   2026-05-28 18:00:00 +0100
 categories: [Italienisch]
 tags: [Salat, Mealprep, Lowcarb, Hähnchen, Fleisch]
+author: Flamongo
 recipe:
   servings: 1
   servings_name: Portion

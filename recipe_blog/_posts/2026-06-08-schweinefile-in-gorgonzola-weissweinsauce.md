@@ -4,6 +4,7 @@ title:  "Schweinefilet in Gorgonzola-Weißweinsauce"
 date:   2026-06-08 18:00:00 +0100
 categories: [Französisch]
 tags: [Hauptspeise, Schwein, Fleisch]
+author: Flamongo
 recipe:
   servings: 2
   servings_name: Portionen

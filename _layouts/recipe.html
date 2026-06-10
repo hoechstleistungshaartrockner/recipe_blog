@@ -1,20 +1,88 @@
 ---
 layout: single
 ---
-<article class="post">
-	<div class="image">
-		<img src="{{ page.featured_image }}" alt="[Hier Bild von {{ page.title }} einfügen]">
-	</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "{{ page.title | jsonify }}",
+  "description": "{{ page.excerpt | strip_html | jsonify }}",
+  "image": "{{ page.featured_image | jsonify }}",
+  {% if page.author %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | jsonify }}"
+  },
+  {% endif %}
+  {% if page.recipe.prep %}
+  "prepTime": "{{ page.recipe.prep | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}",
+  {% endif %}
+  {% if page.recipe.cook %}
+  "cookTime": "{{ page.recipe.cook | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}",
+  {% endif %}
+  {% if page.recipe.servings %}
+  "recipeYield": "{{ page.recipe.servings }} {{ page.recipe.servings_name }}",
+  {% endif %}
+  {% if page.recipe.ingredients_markdown %}
+  "recipeIngredient": [
+    {% assign ingredients = page.recipe.ingredients_markdown | markdownify | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
+    {% for ing in ingredients %}
+      {% if ing != '' %}
+        "{{ ing | strip_html | jsonify }}"{{ forloop.last | unless: true | prepend: ',' }}
+      {% endif %}
+    {% endfor %}
+  ],
+  {% endif %}
+  {% if page.recipe.directions_markdown %}
+  "recipeInstructions": [
+    {% assign steps = page.recipe.directions_markdown | markdownify | remove: '<ol>' | remove: '</ol>' | remove: '<li>' | split: '</li>' %}
+    {% for step in steps %}
+      {% if step != '' %}
+      {
+        "@type": "HowToStep",
+        "text": "{{ step | strip_html | jsonify }}"
+      }{{ forloop.last | unless: true | prepend: ',' }}
+      {% endif %}
+    {% endfor %}
+  ],
+  {% endif %}
+  {% if page.recipe.nutrition %}
+  "nutrition": {
+    "@type": "NutritionInformation"
+    {% if page.recipe.nutrition.calories_per_serving %},
+    "calories": "{{ page.recipe.nutrition.calories_per_serving | jsonify }}"
+    {% endif %}
+    {% if page.recipe.nutrition.protein %},
+    "proteinContent": "{{ page.recipe.nutrition.protein | jsonify }}"
+    {% endif %}
+    {% if page.recipe.nutrition.carbs %},
+    "carbohydrateContent": "{{ page.recipe.nutrition.carbs | jsonify }}"
+    {% endif %}
+    {% if page.recipe.nutrition.fat %},
+    "fatContent": "{{ page.recipe.nutrition.fat | jsonify }}"
+    {% endif %}
+  },
+  {% endif %}
+  "url": "{{ page.url | absolute_url | jsonify }}"
+}
+</script>
 
-	<div class="recipe-body">
-		{{ content }}
+<article class="post" itemscope itemtype="https://schema.org/Recipe">
+	<div class="image">
+		<img src="{{ page.featured_image }}" alt="[Hier Bild von {{ page.title }} einfügen]" itemprop="image">
 	</div>
+	<meta itemprop="name" content="{{ page.title }}">
+	<meta itemprop="url" content="{{ page.url | absolute_url }}">
+	{% if page.author %}
+	<meta itemprop="author" content="{{ page.author }}">
+	{% endif %}
+
 
 	<ul id="recipe" class="recipe-overview">
 		<li class="overview-item" title="Prep Time">
 			<span class="meta-label">Prep Zeit</span>
 			<span class="icon"><i class="fas fa-clock"></i></span>
-			<span class="label">{{ page.recipe.prep }}</span>
+			<span class="label" itemprop="prepTime">{{ page.recipe.prep }}</span>
 		</li>
 		<li class="overview-item" title="Difficulty">
 			<span class="meta-label">Aufwand</span>
@@ -24,13 +92,13 @@ layout: single
 		<li class="overview-item" title="Servings">
 			<span class="meta-label">Portionen</span>
 			<span class="icon"><i class="fas fa-user-friends"></i></span>
-			<span class="label">{{ page.recipe.servings }} {{ page.recipe.servings_name }}</span>
+			<span class="label" itemprop="recipeYield">{{ page.recipe.servings }} {{ page.recipe.servings_name }}</span>
 		</li>
 		{% if page.recipe.cook %}
 			<li class="overview-item small" title="Cook Time">
 				<span class="meta-label">Kochzeit</span>
 				<span class="icon"><i class="fas fa-hourglass-half"></i></span>
-				<span class="label">{{ page.recipe.cook }}</span>
+				<span class="label" itemprop="cookTime">{{ page.recipe.cook }}</span>
 			</li>
 		{% endif %}
 	</ul>
@@ -64,7 +132,9 @@ layout: single
 		<details class="collapsible ingredients" open>
 			<summary><span>Zutaten</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
 			<div class="collapsible-body">
-				{{ page.recipe.ingredients_markdown | markdownify }}
+				<div itemprop="recipeIngredient">
+					{{ page.recipe.ingredients_markdown | markdownify }}
+				</div>
 				{% if page.recipe.utensils_markdown %}
 					<h4>Utensilien</h4>
 					{{ page.recipe.utensils_markdown | markdownify }}
@@ -78,10 +148,13 @@ layout: single
 
 		<details class="collapsible directions" open>
 			<summary><span>Zubereitung</span><span class="chev"><i class="fas fa-chevron-down"></i></span></summary>
-			<div class="collapsible-body">
+			<div class="collapsible-body" itemprop="recipeInstructions">
 				{{ page.recipe.directions_markdown | markdownify }}
 			</div>
 		</details>
+	</div>
+	<div class="recipe-body" itemprop="description">
+		{{ content }}
 	</div>
 
 </article>

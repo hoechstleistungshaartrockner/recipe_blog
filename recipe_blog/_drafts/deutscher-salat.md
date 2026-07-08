@@ -1,13 +1,13 @@
 ---
 layout: recipe
-title: "Universelle Rezeptvorlage"
-date: 2026-06-08
-categories: [Kategorie]
-tags: [Tag1, Tag2]
+title: "Deutschland Salat"
+date: 2026-06-26
+categories: [Hausmannskost]
+tags: [Salat]
 featured_image: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
-  servings: X
+  servings: 1
   servings_name: Portionen
   difficulty: XX/10
   prep: XX min
@@ -22,9 +22,18 @@ recipe:
     carbs: ??? g
     fat: ??? g
   ingredients_markdown: |-
-    * Beispielzutat 1
-    * Beispielzutat 2
-    * Beispielzutat 3
+    * Feldsalat
+    * Gurke
+    * Radiesschen
+    * Karotten
+    * Apfel
+    * Schnittlauch
+    * Petersilie
+    * Kürbiskerne/Sonnenblumenkerne
+    * Hähnchen
+    * Kartoffeln
+    * Für's Dressing:
+        * Essig-Senf Dressing
   directions_markdown: |-
     1. Schritt 1: Beschreibe, was du tun musst.
     2. Schritt 2: Gib weitere Details an.

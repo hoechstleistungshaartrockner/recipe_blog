@@ -1,17 +1,17 @@
 ---
 layout: recipe
-title: "Universelle Rezeptvorlage"
-date: 2026-06-08
-categories: [Kategorie]
-tags: [Tag1, Tag2]
+title: "Butter Chicken"
+date: 2026-07-02
+categories: [Indisch]
+tags: [Hähnchen, Hauptgericht, Fleisch, Reis]
 featured_image: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
-author: Flamongo
+author: Rocko
 recipe:
-  servings: X
+  servings: 4
   servings_name: Portionen
   difficulty: XX/10
-  prep: XX min
-  cook: XX min
+  prep: 20 min
+  cook: 20 min
   equipment:
     - Equipment 1
     - Equipment 2
@@ -22,9 +22,25 @@ recipe:
     carbs: ??? g
     fat: ??? g
   ingredients_markdown: |-
-    * Beispielzutat 1
-    * Beispielzutat 2
-    * Beispielzutat 3
+    * 600 g Hähnchenfilet
+    * Für die Marinade
+      * 4 Knoblauchzehen, gepresst
+      * 2 EL Joghurt, 3.5% Fett
+      * 3 EL Olivenöl
+      * 0.5 Zitrone, nur den Saft
+      * 0.5 TL Kurkuma
+      * 1 TL Chilipulver
+      * 1 TL Paprikapulver
+      * 1 TL Garam Masala
+      * Salz, nach Geschmack
+      * Pfeffer, nach Geschmack
+    * Für die Sauce:
+      * 60 ml Öl, zum anbraten
+      * 4 Knoblauchzehen
+      * 15 g Ingwer, gewürfelt
+      * 1 große Zwiebel
+      * 80 g Butter
+      * 60 g Cashews
   directions_markdown: |-
     1. Schritt 1: Beschreibe, was du tun musst.
     2. Schritt 2: Gib weitere Details an.

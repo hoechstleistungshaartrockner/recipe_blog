@@ -16,7 +16,10 @@ recipe:
     protein: ??? g
     carbs: ??? g
     fat: ??? g
-  equipment: [Schneidbrett, Scharfes Messer, Pfanne]
+  equipment: 
+    - Schneidbrett
+    - scharfes Messer
+    - Pfanne
   ingredients_markdown: |-
     * 500 g Schweinefilet
     * 1 kleine Zwiebel

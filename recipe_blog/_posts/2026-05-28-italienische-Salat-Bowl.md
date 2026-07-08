@@ -25,10 +25,11 @@ recipe:
     * 80 g Mozzarella, in Stücke gerissen
     * 120 g Hähnchenbrustfilet, in mundgerechte Stücke geschnitten, gegrillt oder gebraten
     * 10 g frischer Basilikum
-    * 15 ml Olivenöl
-    * 15 ml Balsamico Essig
-    * 1 Prise getrockneter Oregano
-    * Salz und Pfeffer zum Abschmecken
+    * Für das Dressing:
+      * 15 ml Olivenöl
+      * 15 ml Balsamico Essig
+      * 1 Prise getrockneter Oregano
+      * Salz und Pfeffer zum Abschmecken
   directions_markdown: |-
     1. Alle Zutaten in eine große Schüssel geben.
     2. Mit Salz, Pfeffer, Olivenöl und Balsamico abschmecken.

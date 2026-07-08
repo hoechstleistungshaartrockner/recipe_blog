@@ -1,34 +1,56 @@
 ---
 layout: recipe
-title: "Universelle Rezeptvorlage"
-date: 2026-06-08
-categories: [Kategorie]
-tags: [Tag1, Tag2]
+title: "Japanischer Salat"
+date: 2026-06-26
+categories: [Asiatisch]
+tags: [Salat, Asiatisch]
+collection: Salad
 featured_image: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
-  servings: X
+  servings: 1
   servings_name: Portionen
   difficulty: XX/10
   prep: XX min
   cook: XX min
   equipment:
-    - Equipment 1
-    - Equipment 2
-    - Equipment 3
+    - Mandoline
+    - Mixer
   nutrition:
     calories_per_serving: ??? kcal
     protein: ??? g
     carbs: ??? g
     fat: ??? g
   ingredients_markdown: |-
-    * Beispielzutat 1
-    * Beispielzutat 2
-    * Beispielzutat 3
+    * Für den Salat:
+      * 130 g Spitzkohl, mit der Mandoline dünn geschnitten
+      * 60 g Rotkohl, mit der Mandoline dünn geschnitten
+      * 30 g frischer Spinat
+      * 40 g Karotte, mit der Mandoline in Stifte geschnitten
+      * 100 g Edamame
+      * 1 weich gekochtes Ei, halbiert
+      * Thunfischmayo
+      * Radiesschen
+      * geröstete Noristreifen
+      * Schwarzer Sesam
+      * Mandarinen
+    * Für's Dressing:
+      * 2 mittelgroße Karotten, geschält und grob gehackt (ca. 180 g)
+      * 0.5 Apfel, entkernt und gewürfelt
+      * 0.25 kleine Zwiebel, grob gehackt
+      * 25–30 g frischer Ingwer, geschält
+      * 2 EL Reisessig
+      * 1 EL Sojasauce
+      * 1 TL geröstetes Sesamöl
+      * 1 EL neutrales Pflanzenöl (z. B. Raps* oder Traubenkernöl)
+      * 2–4 EL Wasser (je nach gewünschter Konsistenz)
+      * 0.5 TL Salz
+      * Frisch gemahlener schwarzer Pfeffer
   directions_markdown: |-
-    1. Schritt 1: Beschreibe, was du tun musst.
-    2. Schritt 2: Gib weitere Details an.
-    3. Schritt 3: Fertig zum Servieren.
+    1. Karotte und Ingwer schälen
+    2. Gemüse in grobe Stücke schneiden
+    3. Alle Zutaten für das Dressing in den Mixer schmeißen und pürieren!
+    4. Das Dressing ergibt mehr Portionen als 1 Salat, daher Reste einfach eintuppern.
 ---
 
 Hier kannst du eine kurze Einleitung oder Beschreibung für dein Rezept einfügen. Ersetze den Text durch Hintergrund, Tipps oder Serviervorschläge.

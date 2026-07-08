@@ -3,67 +3,70 @@ layout: single
 ---
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": "{{ page.title | jsonify }}",
-  "description": "{{ page.excerpt | strip_html | jsonify }}",
-  "image": "{{ page.featured_image | jsonify }}",
-  {% if page.author %}
-  "author": {
-    "@type": "Person",
-    "name": "{{ page.author | jsonify }}"
-  },
-  {% endif %}
-  {% if page.recipe.prep %}
-  "prepTime": "{{ page.recipe.prep | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}",
-  {% endif %}
-  {% if page.recipe.cook %}
-  "cookTime": "{{ page.recipe.cook | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}",
-  {% endif %}
-  {% if page.recipe.servings %}
-  "recipeYield": "{{ page.recipe.servings }} {{ page.recipe.servings_name }}",
-  {% endif %}
-  {% if page.recipe.ingredients_markdown %}
-  "recipeIngredient": [
-    {% assign ingredients = page.recipe.ingredients_markdown | markdownify | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
-    {% for ing in ingredients %}
-      {% if ing != '' %}
-        "{{ ing | strip_html | jsonify }}"{{ forloop.last | unless: true | prepend: ',' }}
-      {% endif %}
-    {% endfor %}
-  ],
-  {% endif %}
-  {% if page.recipe.directions_markdown %}
-  "recipeInstructions": [
-    {% assign steps = page.recipe.directions_markdown | markdownify | remove: '<ol>' | remove: '</ol>' | remove: '<li>' | split: '</li>' %}
-    {% for step in steps %}
-      {% if step != '' %}
-      {
-        "@type": "HowToStep",
-        "text": "{{ step | strip_html | jsonify }}"
-      }{{ forloop.last | unless: true | prepend: ',' }}
-      {% endif %}
-    {% endfor %}
-  ],
-  {% endif %}
-  {% if page.recipe.nutrition %}
-  "nutrition": {
-    "@type": "NutritionInformation"
-    {% if page.recipe.nutrition.calories_per_serving %},
-    "calories": "{{ page.recipe.nutrition.calories_per_serving | jsonify }}"
-    {% endif %}
-    {% if page.recipe.nutrition.protein %},
-    "proteinContent": "{{ page.recipe.nutrition.protein | jsonify }}"
-    {% endif %}
-    {% if page.recipe.nutrition.carbs %},
-    "carbohydrateContent": "{{ page.recipe.nutrition.carbs | jsonify }}"
-    {% endif %}
-    {% if page.recipe.nutrition.fat %},
-    "fatContent": "{{ page.recipe.nutrition.fat | jsonify }}"
-    {% endif %}
-  },
-  {% endif %}
-  "url": "{{ page.url | absolute_url | jsonify }}"
+	"@context": "https://schema.org",
+	"@type": "Recipe"
+	{% if page.title %},
+	"name": {{ page.title | jsonify }}
+	{% endif %}
+	{% if page.excerpt %},
+	"description": {{ page.excerpt | strip_html | jsonify }}
+	{% endif %}
+	{% if page.featured_image %},
+	"image": {{ page.featured_image | absolute_url | jsonify }}
+	{% endif %}
+	{% if page.author %},
+	"author": {"@type": "Person", "name": {{ page.author | jsonify }}}
+	{% endif %}
+	{% if page.date %},
+	"datePublished": {{ page.date | date_to_xmlschema | jsonify }}
+	{% endif %}
+	{% if page.recipe.prep %},
+	"prepTime": {{ page.recipe.prep | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}
+	{% endif %}
+	{% if page.recipe.cook %},
+	"cookTime": {{ page.recipe.cook | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify }}
+	{% endif %}
+	{% if page.recipe.prep and page.recipe.cook %},
+	"totalTime": {{ page.recipe.prep | replace: ' min', 'M' | replace: ' ', '' | prepend: 'PT' | jsonify | replace: '"PT', '"PT' | replace: 'M"', 'M"' }}
+	{% endif %}
+	{% if page.recipe.servings %},
+	"recipeYield": {{ page.recipe.servings | append: ' ' | append: page.recipe.servings_name | jsonify }}
+	{% endif %}
+	{% if page.tags %},
+	"keywords": {{ page.tags | join: ', ' | jsonify }}
+	{% endif %}
+	{% assign recipe_category = page.recipe.category | default: page.category %}
+	{% if recipe_category %},
+	"recipeCategory": {{ recipe_category | jsonify }}
+	{% endif %}
+	{% if page.recipe.cuisine %},
+	"recipeCuisine": {{ page.recipe.cuisine | jsonify }}
+	{% endif %}
+	{% if page.recipe.ingredients_markdown %},
+	"recipeIngredient": [
+		{% assign ingredients = page.recipe.ingredients_markdown | markdownify | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
+		{% for ing in ingredients %}
+			{% if ing != '' %}{{ ing | strip_html | jsonify }}{% unless forloop.last %},{% endunless %}{% endif %}
+		{% endfor %}
+	]
+	{% endif %}
+	{% if page.recipe.directions_markdown %},
+	"recipeInstructions": [
+		{% assign steps = page.recipe.directions_markdown | markdownify | remove: '<ol>' | remove: '</ol>' | remove: '<li>' | split: '</li>' %}
+		{% for step in steps %}
+			{% if step != '' %}{"@type": "HowToStep", "text": {{ step | strip_html | jsonify }}}{% unless forloop.last %},{% endunless %}{% endif %}
+		{% endfor %}
+	]
+	{% endif %}
+	{% if page.recipe.nutrition %},
+	"nutrition": {"@type": "NutritionInformation"
+		{% if page.recipe.nutrition.calories_per_serving %}, "calories": {{ page.recipe.nutrition.calories_per_serving | jsonify }}{% endif %}
+		{% if page.recipe.nutrition.protein %}, "proteinContent": {{ page.recipe.nutrition.protein | jsonify }}{% endif %}
+		{% if page.recipe.nutrition.carbs %}, "carbohydrateContent": {{ page.recipe.nutrition.carbs | jsonify }}{% endif %}
+		{% if page.recipe.nutrition.fat %}, "fatContent": {{ page.recipe.nutrition.fat | jsonify }}{% endif %}
+	}
+	{% endif %}
+	,"url": {{ page.url | absolute_url | jsonify }}
 }
 </script>
 
@@ -140,8 +143,15 @@ layout: single
 					{{ page.recipe.utensils_markdown | markdownify }}
 				{% endif %}
 				<script async="async" src="//platform.getbring.com/widgets/import.js"></script>
-				<div data-bring-import style="display:none">
-					<a href="https://www.getbring.com">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
+				<div
+					class="bring-import-widget"
+					data-bring-import="{{ page.url | absolute_url }}"
+					data-bring-language="de"
+					data-bring-theme="dark"
+					data-bring-base-quantity="{{ page.recipe.servings | default: 4 }}"
+					data-bring-requested-quantity="{{ page.recipe.servings | default: 4 }}"
+				>
+					<a href="https://www.getbring.com" target="_blank" rel="noopener">Bring! Einkaufsliste App f&uuml;r iPhone und Android</a>
 				</div>
 			</div>
 		</details>

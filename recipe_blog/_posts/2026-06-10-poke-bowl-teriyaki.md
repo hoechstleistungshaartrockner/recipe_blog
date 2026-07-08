@@ -3,7 +3,7 @@ layout: recipe
 title: "Poké Bowl Teriyaki"
 date: 2026-06-10
 categories: [Asiatisch]
-tags: [Reis, Fisch, Mealprep, Hauptgericht]
+tags: [Reis, Fisch, Mealprep, Hauptgericht, Pokebowl]
 featured_image: https://thewoodenskillet.com/wp-content/uploads/2021/08/salmon-poke-bowl-recipe-10-600x600.jpg
 author: Rocko
 recipe:
@@ -15,7 +15,7 @@ recipe:
   equipment:
     - Reiskocher
     - Schneidbrett
-    - Scharfes Messer
+    - scharfes Messer
     - Heißluft-Fritteuse
     - Mandoline
     - Mikrowelle

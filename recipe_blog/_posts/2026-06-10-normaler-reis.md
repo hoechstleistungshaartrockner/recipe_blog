@@ -20,8 +20,8 @@ recipe:
     carbs: ??? g
     fat: ??? g
   ingredients_markdown: |-
-    * 1 Tasse Reis
-    * 2 Tassen Wasser
+    * 1 Tasse Reis (Basmati oder Jasmin)
+    * 1,5 Tassen Wasser
   directions_markdown: |-
     1. Reis und Wasser zusammen in die Schüssel schmeißen und schwenken, sodass sich der Reis gleichmäßig am Boden verteilt.
     2. Schüssel in den Multikocher stecken, Druckkochtopf funktion verwenden, delayed release, 2 min auf LOW. Darauf achten, dass das Ventil geschlossen ist. Vorgang starten!

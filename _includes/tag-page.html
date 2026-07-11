@@ -9,4 +9,4 @@
     {% include archive-single.html locale=locale type=entries_layout %}
   {% endfor %}
 </div>
-<a href="/tags/" class="back-to-top">{{ site.data.ui-text[locale].back_to_top | default: 'Back to Top' }} &larr; {{ site.data.ui-text[locale].back_to_tags | default: 'Back to tags' }}</a>
+<a href="{{ '/tags/' | relative_url }}" class="back-to-top">{{ site.data.ui-text[locale].back_to_top | default: 'Back to Top' }} &larr; {{ site.data.ui-text[locale].back_to_tags | default: 'Back to tags' }}</a>

@@ -11,7 +11,7 @@
   {% for i in (1..items_max) reversed %}
     {% for item in include.taxonomies %}
       {% if item[1].size == i %}
-        {% capture taxonomy_url %}/{{ link_prefix }}/{{ item[0] | slugify }}/{% endcapture %}
+        {% capture taxonomy_url %}/{{ link_prefix }}/{{ item[0] | uri_escape }}/{% endcapture %}
         <li>
           <a href="{{ taxonomy_url | relative_url }}">
             <strong>{{ item[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>

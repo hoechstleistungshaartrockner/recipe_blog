@@ -17,9 +17,9 @@ recipe:
     fat: ??? g
   ingredients_markdown: |-
     * 2 Eier, Größe M
-    * 80 g Grana Padano/Parmesan
+    * 80 g Grana Padano
     * 250 g Fussili
-    * 125 g Schinkenwürfel/Speckwürfel
+    * 125 g Schinkenwürfel
     * Salz, Pfeffer zum Abschmecken
   directions_markdown: |-
     1. gesalzenes Wasser im Topf aufkochen und Nudeln nach Anleitung kochen.

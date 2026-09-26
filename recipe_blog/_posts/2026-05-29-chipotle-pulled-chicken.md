@@ -22,7 +22,7 @@ recipe:
     carbs: 48 g
     fat: 22 g
   ingredients_markdown: |-
-    * 1200 g Hähnchenbrustfilet, in groben Stücken
+    * 1200 g Hähnchenbrustfilet
     * 240 ml Orangensaft
     * 199 g Chipotle-Chilis in Adobo-Sauce
     * 3 EL Sojasauce
@@ -36,7 +36,7 @@ recipe:
     * eine Handvoll Korianderstängel
   directions_markdown: |-
     1. Alle Zutaten bis auf das Hähnchen in einen Mixer geben und glatt pürieren.
-    2. Das Hähnchen in den Crockpot legen und die Sauce darüber gießen.
+    2. Das Hähnchen in grobe Stücke schneiden, in den Crockpot legen und die Sauce darüber gießen.
     3. Auf hoher Stufe 5–6 Stunden oder auf niedriger Stufe 7–8 Stunden garen, bis das Fleisch sehr zart ist und sich leicht mit zwei Gabeln zerpflücken lässt.
     4. Das Hähnchen im Topf mit zwei Gabeln zerpflücken und gut mit der Sauce vermischen.
     5. Das Honey Chipotle Chicken in Tacos, Sandwiches oder auf Reis servieren. Dazu passt frisches Pico de Gallo oder Krautsalat.

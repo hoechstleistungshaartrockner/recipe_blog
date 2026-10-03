@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: "Nudeln mit Schinken-Sahne Sauce"
-date: 2026-06-08
+date: 2026-10-03
 categories: [Konventionell]
 tags: [Pasta, Fleisch, Schwein, konventionell, Hauptgericht]
 featured_image: https://www.einfachmalene.de/wp-content/uploads/2023/03/Schinken-Sahne-Sosse-8-1024x1536.jpg

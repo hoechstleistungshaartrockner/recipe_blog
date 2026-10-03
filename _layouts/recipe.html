@@ -96,14 +96,16 @@ layout: single
 	{% assign ai_image = page.ai-generated-image | default: page.featured_image %}
 	{% assign real_image = page.real-life-photo | default: page.featured_image %}
 	{% if ai_image or real_image %}
+		{% assign ai_image_url = ai_image | relative_url %}
+		{% assign real_image_url = real_image | relative_url %}
 		<div class="comparison-gallery">
 			<div class="dish-visual-comparison" id="dish-visual-comparison" aria-label="Dish comparison images">
 				<figure class="polaroid ai-polaroid">
-					<img src="{{ ai_image | default: real_image }}" alt="AI-generated render of {{ page.title }}" itemprop="image">
+					<img src="{{ ai_image_url | default: real_image_url }}" alt="AI-generated render of {{ page.title }}" itemprop="image">
 					<figcaption>So könnte es aussehen<br>(KI-generiert)</figcaption>
 				</figure>
 				<figure class="polaroid real-polaroid">
-					<img src="{{ real_image | default: ai_image }}" alt="Real-life photo of {{ page.title }}">
+					<img src="{{ real_image_url | default: ai_image_url }}" alt="Real-life photo of {{ page.title }}">
 					<figcaption>So wird es wahrscheinlich tatsächlich aussehen</figcaption>
 				</figure>
 			</div>

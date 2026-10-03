@@ -4,7 +4,8 @@ title: "Universelle Rezeptvorlage"
 date: 2026-06-08
 categories: [Kategorie]
 tags: [Tag1, Tag2]
-featured_image: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: X
@@ -62,3 +63,11 @@ Der Schwierigkeitsgrad des Rezepts wird anhand der folgenden Fragen bestimmt. Je
 [ ] Spezielle Technik oder Präzision ist notwendig (Emulsion, Glasur, Soufflé) (+ 0.5)
 [ ] Die Zubereitung erlaubt es nicht wegzugehen. (+1.5)
 ```
+
+## Prompt für Bildgenerierung
+
+Erstelle ein Bild des fertig angerichteten Rezepts für meinen Rezepteblog. Der Teller/die Schüssel soll aussehen wie eine portugiesische handgemachte Keramik, mit einfacher Glasur die leichte, chaotische Farbvariationen zeigt und einzelne Farbspritzer. Die Farbe sollte einen guten Kontrast zum Gericht haben, damit dessen Farben schön hervorkommen. Die Form des Geschirrs ist schlicht und einfach.
+Das Gericht befindet sich angerichtet auf dem Teller mit dem relevanten Besteck neben dem Teller zurecht gelegt oder im Gericht eingetaucht, als hätte jemand einfach während des Essens das Besteck abgelegt um ein Foto zu machen.
+Der Teller/die Schüssel befindet sich wiederum auf einem schweren, rustikalen Holztisch. Der Blickwinkel ist schräg von oben und Fokus liegt auf dem Gericht, im Hintergrund befinden sich verschwommen die Zutaten und eventuelle benutzte Utensilien.
+Eine Stoffserviette oder ein Handtuch liegt neben dem Teller.
+Das Bild soll ein quadratisches Format haben.

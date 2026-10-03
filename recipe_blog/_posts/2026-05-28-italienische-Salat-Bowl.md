@@ -5,6 +5,8 @@ date:   2026-05-28 18:00:00 +0100
 categories: [Italienisch]
 tags: [Salat, Mealprep, Lowcarb, Hähnchen, Fleisch]
 author: Flamongo
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 recipe:
   servings: 1
   servings_name: Portion

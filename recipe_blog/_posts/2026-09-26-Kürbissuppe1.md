@@ -4,7 +4,8 @@ title: "Curry-Ingwer-Kürbissuppe"
 date: 2026-09-26
 categories: [Herbst]
 tags: [Suppe, Hauptgericht, Vorspeise, vegan, Siebeck]
-featured_image: https://www.sweetsandlifestyle.com/wp-content/uploads/2018/09/Kuerbissuppe-1-683x1024.jpg
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Rocko
 recipe:
   servings: 4

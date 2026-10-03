@@ -4,7 +4,8 @@ title: "Bamati/Jasminreis im Ninja Multikocher"
 date: 2026-06-10
 categories: [Asiatisch]
 tags: [Reis, Beilage]
-featured_image: https://shibaskitchen.de/wp-content/uploads/2023/07/Kein-Titel-1500-%C3%97-1000-px-3-1-1024x683.png
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: 4

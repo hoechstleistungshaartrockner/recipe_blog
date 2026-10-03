@@ -4,7 +4,8 @@ title: "Balsamico-Feta-Kürbissuppe"
 date: 2026-10-03
 categories: [Herbst]
 tags: [Suppe, Hauptgericht, Vorspeise, vegetarisch, Siebeck]
-featured_image: https://www.kochmaedchen.de/wp-content/uploads/2019/11/K%C3%BCrbissuppe-H%C3%A4hnchen5-768x1152.jpg
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://www.kochmaedchen.de/wp-content/uploads/2019/11/K%C3%BCrbissuppe-H%C3%A4hnchen5-768x1152.jpg
 author: Rocko
 recipe:
   servings: 4

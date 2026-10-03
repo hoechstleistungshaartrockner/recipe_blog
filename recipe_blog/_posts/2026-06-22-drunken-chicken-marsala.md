@@ -4,7 +4,8 @@ title: "Marsala Hähnchen"
 date: 2026-06-22
 categories: [Italienisch]
 tags: [Hähnchen, Hauptgericht, Fleisch]
-featured_image: https://images.eatthismuch.com/med/284655_Fizzbit_e0208657-0068-4a49-9be2-e114a86bb12c.png
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: 4

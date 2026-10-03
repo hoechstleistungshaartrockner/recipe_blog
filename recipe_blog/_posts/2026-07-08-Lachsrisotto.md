@@ -4,7 +4,8 @@ title: "Lachsrisotto"
 date: 2026-07-08
 categories: [Italienisch]
 tags: [Hauptgericht, Fisch, Reis, Risotto]
-featured_image: https://www.italianstylecooking.net/wp-content/uploads/2022/01/Lachs-Risotto-1024x683.jpg.webp
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: X

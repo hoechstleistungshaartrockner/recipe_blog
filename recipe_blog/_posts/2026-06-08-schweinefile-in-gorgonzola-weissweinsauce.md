@@ -5,6 +5,8 @@ date:   2026-06-08 18:00:00 +0100
 categories: [Französisch]
 tags: [Hauptspeise, Schwein, Fleisch]
 author: Flamongo
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 recipe:
   servings: 2
   servings_name: Portionen

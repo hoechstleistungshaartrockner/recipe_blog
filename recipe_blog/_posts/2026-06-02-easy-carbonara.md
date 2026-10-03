@@ -3,7 +3,8 @@ layout: recipe
 title: "Einfache Carbonara"
 categories: [Italienisch]
 tags: [Pasta, Fleisch, Schwein]
-featured_image: https://img.chefkoch-cdn.de/rezepte/1298241234947062/bilder/1616493/crop-960x640/carbonara-wie-bei-der-mamma-in-rom.jpg
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Rocko
 recipe:
   servings: 2

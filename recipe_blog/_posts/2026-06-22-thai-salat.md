@@ -4,7 +4,8 @@ title: "Thai Salat"
 date: 2026-06-22
 categories: [Asiatisch]
 tags: [vegetarisch, Hauptgericht, Hähnchen, Tofu, Salat, Mealprep]
-featured_image: https://simplyceecee.co/wp-content/uploads/2022/06/cpkthaicrunchsaladcopy-cat.jpg
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: 1

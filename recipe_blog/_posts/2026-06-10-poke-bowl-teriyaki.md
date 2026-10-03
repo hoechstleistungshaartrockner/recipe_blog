@@ -4,7 +4,8 @@ title: "Poké Bowl Teriyaki"
 date: 2026-06-10
 categories: [Asiatisch]
 tags: [Reis, Fisch, Mealprep, Hauptgericht, Pokebowl]
-featured_image: https://thewoodenskillet.com/wp-content/uploads/2021/08/salmon-poke-bowl-recipe-10-600x600.jpg
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Rocko
 recipe:
   servings: 4

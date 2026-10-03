@@ -4,7 +4,8 @@ title: "Sushireis im Ninja Multikocher"
 date: 2026-06-10
 categories: [Asiatisch]
 tags: [Reis, Beilage]
-featured_image: https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/1946_1460/public/2025-04/2025_sushi-reis-kochen_aufmacher.jpg?h=a1e1a043&itok=Jdcplvfv
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Flamongo
 recipe:
   servings: 4

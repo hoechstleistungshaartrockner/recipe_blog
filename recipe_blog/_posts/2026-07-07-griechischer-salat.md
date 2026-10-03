@@ -4,7 +4,8 @@ title: "Griechischer Salat"
 date: 2026-07-07
 categories: [Griechisch]
 tags: [Salat, Fleisch, Hähnchen, Hauptgericht]
-featured_image: https://hips.hearstapps.com/hmg-prod/images/greek-salad-lead-642f29241cceb.jpg?crop=1xw:1xh;center,top
+ai-generated-image: /assets/images/leer.png
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 author: Rocko
 recipe:
   servings: 1

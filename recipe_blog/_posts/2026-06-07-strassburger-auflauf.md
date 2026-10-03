@@ -2,6 +2,7 @@
 layout: recipe
 title: "Straßburger Auflauf"
 featured_image: https://img.chefkoch-cdn.de/rezepte/701911172819472/bilder/764355/crop-960x640/strassburger-auflauf.jpg
+real-life-photo: https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png
 date: 2026-06-07 12:00:00 +0200
 categories: [Französisch]
 tags: [Auflauf, Nudelauflauf, Hauptgericht, Fleisch, Rind]
